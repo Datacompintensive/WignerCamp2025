@@ -22,7 +22,7 @@ You need to implement **two functions** in `feature_extraction.py`:
 
 ## How to Run
 
-Install pytest if needed:
+Test your solution with:
 
 ```bash
 cd ALT_intro/FeatureExtraction

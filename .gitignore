@@ -1,5 +1,6 @@
 **/__pycache__
 **/.pytest_cache
+build/
 
 # LaTeX temporary files
 *.aux
@@ -16,3 +17,6 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# For compiling latex localle
+compile_latex.ipynb
