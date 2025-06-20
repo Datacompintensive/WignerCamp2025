@@ -18,9 +18,14 @@ Write a function that takes a real symmetric matrix as a `torch.Tensor` and retu
 - `test_eigenvector_finder.py`: Pytest-based test suite.
 - `solution.py`: Contains a correct solution for reference.
 
+### Hints
+
+You might want to look at the documentation for the [torch.linalg.eigh](https://docs.pytorch.org/docs/stable/generated/torch.linalg.eigh.html).
+
 ## How to Run
 
 Test the solution with:
 
 ```bash
+cd ALT_intro/Eigenvector
 pytest test_eigenvector_finder.py
