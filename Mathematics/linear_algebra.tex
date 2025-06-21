@@ -8,22 +8,10 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{physics}
-%\usepackage{siunitx}
-\setbeamertemplate{navigation symbols}{}
+\usepackage{siunitx}
 
 %% For the name of the chemical compounds
 %\usepackage{mhchem}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdftitle={Overleaf Example},
-    pdfpagemode=FullScreen,
-    }
-
-\graphicspath{ {./img/} }
 
 % Code listing
 \usepackage{listings}
@@ -109,7 +97,7 @@
 
 \title{\textcolor{blue}{Introduction to Linear Algebra}}
 \subtitle{\textcolor{blue}{Wigner Summer Camp \\ Data and Compute Intensive Sciences Research Group}}
-\author{Bal\'azs, Paszk\'al, Vince, Levente, Antal \\ \'{E}va, Hajni}
+\author{\textcolor{blue}{Balázs, Paszkál, Vince, Levente, Antal \\ Éva, Hajni}}
 
 \date{\textcolor{blue}{7-11 July 2025}}
 
@@ -137,7 +125,7 @@
     %\includegraphics[width=0.7\textwidth]{img/logo.png}
     \column{0.3\textwidth}
     \centering
-    \includegraphics[width=0.8\textwidth]{logo.png}
+    \includegraphics[width=0.8\textwidth]{img/logo.png}
     \column{0.3\textwidth}
     %\includegraphics[width=0.7\textwidth]{img/logo.png}
     \centering
@@ -148,8 +136,7 @@
     Linear algebra deals with:
     \begin{itemize}
         \item Vectors.
-        \item Matrices.
-        \item ...
+        \item Matrices. (The linear transformations of vector spaces.)
     \end{itemize}
 
     It is used in many places:
@@ -163,8 +150,9 @@
 
 \begin{frame}{What is a Vector?}
   \begin{itemize}
-    \item \textbf{Physicist's View:} An arrow in space with direction and magnitude.
-    \item \textbf{Computer Scientist's View:} A 1D array or list of numbers.
+    \item \textbf{Mathematician's view:} A set that satisfies the 8 axiom.
+    \item \textbf{Physicist's view:} An arrow in space with direction and magnitude.
+    \item \textbf{Computer Scientist's view:} A 1D array or list of numbers.
     \begin{equation}
     \vec{v} = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}, \quad
     \mathbf{w} = \langle 4, 0, -5 \rangle, \quad
@@ -192,6 +180,10 @@
     \item The dot product of two vectors $\vec{a}$ and $\vec{b}$ is:
     \begin{equation}
     \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + \dots + a_n b_n.
+    \end{equation}
+    \item It can be shown that:
+    \begin{equation}
+        \vec{a} \cdot \vec{b} = ||\vec{a}||\cdot||\vec{b}||\cos(\angle\left(\vec{a},\vec{b}\right)).
     \end{equation}
     \begin{example}[Dot product]    
         \begin{equation}
@@ -223,7 +215,7 @@
     \]
     \item Interpretation:
     \begin{itemize}
-      \item (a) Slightly positive \(\Rightarrow\) vectors are mostly aligned.
+      \item (a) Zero \(\Rightarrow\) the vectors are perpendicular.
       \item (b) Positive \(\Rightarrow\) angle between the vectors is acute.
     \end{itemize}
   \end{itemize}
@@ -308,21 +300,33 @@
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{Geometric View: Matrix Effects}
+\begin{frame}{Matrices as linear transformation}
+
+\begin{itemize}
+    \item Each matrix denotes a transformation $\vec{v} \mapsto M\vec{v}$. It's always linear.
+    \item It can be proven that all linear transformation can be described with a matrix.
+    
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Transformation examples}
   \begin{itemize}
     \item Stretching: 
-    \begin{equation}
-    \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \vec{v} = \text{doubles length}
-    \end{equation}
+    %\begin{equation}
+    $\begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}.$ %\vec{v} = %\text{doubles length}
+    %\end{equation}
     \item Rotation:
-    \begin{equation}
-    \text{Rotation by } 90^\circ: \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
-    \end{equation}
+    %\begin{equation}
+    %\text{Rotation by } 90^\circ: 
+    $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}.$
+    %\end{equation}
     \item Reflection:
-    \begin{equation}
-    \text{Reflection over x-axis: } \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
-    \end{equation}
-    \item Projection (flattening onto a line or plane)
+    %\begin{equation}
+    %\text{Reflection over x-axis: }
+    $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}.$
+    %\end{equation}
+    \item Projection (flattening onto a line or plane) $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}.$
   \end{itemize}
 \end{frame}
 
@@ -344,7 +348,7 @@
 
 \begin{frame}{Eigenvalues and Eigenvectors}
   \begin{itemize}
-    \item We noticed earlier that 
+    \item Notice that 
     \begin{equation}
         \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = 2\begin{bmatrix} 1 \\ 1 \end{bmatrix}. 
     \end{equation}
@@ -369,6 +373,7 @@
     \item A square matrix of size $n \times n$ has at most $n$ eigenvalues (including complex ones and multiplicities).
     \item If all eigenvalues of a matrix are positive, the matrix is positive definite.
     \item Diagonal matrices have their diagonal elements as eigenvalues, and the standard basis vectors as eigenvectors.
+    \item The eigenvalues of a complex Hermitian or real symmetric matrix are real.
   \end{itemize}
 \end{frame}
 
