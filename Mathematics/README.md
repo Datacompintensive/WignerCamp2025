@@ -33,7 +33,7 @@ This will:
 
 ## 📚 References
 
-All citations and bibliography data are stored in the [references.bib](references.bib) file. The `CMake` compiles all the `.tex` files to `.pdf` files bith with and without the need for bibliography.
+All citations and bibliography data are stored in the [references.bib](references.bib) file.
 
 ---
 
