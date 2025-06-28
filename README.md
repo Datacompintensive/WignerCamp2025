@@ -27,10 +27,13 @@ cd WignerCamp2025
 
 ### Contents
 
+You should get familiar with the folders in this repository in the following order:
+
 | Folder | Description |
 |--------|-------------|
 | [BasicProgramming](./BasicProgramming) | Exercises and materials on basic Python programming. |
 | [Mathematics](./Mathematics) | Linear algebra essentials for data transformations. |
+| [Terminal](./Terminal) | Basic linux terminal and `vim` commands. |
 | [ALT_intro](./ALT_intro) | Introduction to time series classification and the ALT method. |
 
 ---

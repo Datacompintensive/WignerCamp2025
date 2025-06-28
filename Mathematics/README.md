@@ -2,12 +2,14 @@
 
 This folder contains two educational LaTeX-based presentations designed for the Wigner Summer Camp. These presentations cover essential mathematical foundations and evaluation techniques for time series classification. All documents can be built using the provided `CMakeLists.txt`, which automatically compiles the `.tex` files to `.pdf`, handling references and cleanup.
 
-## 📊 Presentations
+## 📊 Presentations and Notebooks
 
 | PDF File | Description | Source File |
 |----------|-------------|-------------|
 | [linear_algebra.pdf](linear_algebra.pdf) | Covers basic concepts in linear algebra, including vectors, matrices, dot products, matrix multiplication, geometric interpretation, and eigendecomposition. | [linear_algebra.tex](linear_algebra.tex) |
 | [TSC.pdf](TSC.pdf) | Introduces the time series classification (TSC) problem. Discusses evaluation metrics such as accuracy, precision, recall, and F1 score, with illustrative confusion matrix examples. | [TSC.tex](TSC.tex) |
+| | Provides hands on exercises for the important scientific computing concepts: dot product, vector-matrix and matrix-matrix multiplication, and precentiles. | [ComputingExercises.ipynb](ComputingExercises.ipynb) |
+| | Gives the solutions for the exercies in [ComputingExercises.ipynb](ComputingExercises.ipynb). | [ComputingExercises_solution.ipynb](ComputingExercises_solution.ipynb) |
 
 ## 🛠 Compilation
 
@@ -31,7 +33,7 @@ This will:
 
 ## 📚 References
 
-All citations and bibliography data are stored in the [references.bib](references.bib) file and are used by both presentations to format and manage citations consistently.
+All citations and bibliography data are stored in the [references.bib](references.bib) file. The `CMake` compiles all the `.tex` files to `.pdf` files bith with and without the need for bibliography.
 
 ---
 
