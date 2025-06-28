@@ -21,7 +21,7 @@ The core method of the camp is the **Adaptive Law-based Transformation (ALT)** â
 You can clone this repository using:
 
 ```bash
-git clone https://github.com/Datacompintensive/WignerCamp2025.git
+git clone git@github.com:Datacompintensive/WignerCamp2025.git
 cd WignerCamp2025
 ```
 
@@ -34,6 +34,7 @@ You should get familiar with the folders in this repository in the following ord
 | [BasicProgramming](./BasicProgramming) | Exercises and materials on basic Python programming. |
 | [Mathematics](./Mathematics) | Linear algebra essentials for data transformations. |
 | [Terminal](./Terminal) | Basic linux terminal and `vim` commands. |
+| [TestsAndDocumentation](./TestsAndDocumentation) | Describes the basic usage of `pytest` and introduces the **NumPy-style docstrings** for python functions. |
 | [ALT_intro](./ALT_intro) | Introduction to time series classification and the ALT method. |
 
 ---
