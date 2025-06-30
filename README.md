@@ -10,9 +10,18 @@ The camp is designed for high school students and introduces the mathematical an
 
 The core method of the camp is the **Adaptive Law-based Transformation (ALT)** — a lightweight, interpretable, and efficient feature representation technique for time series classification. ALT builds on the earlier LLT method and provides state-of-the-art performance with minimal tuning.
 
-- 📄 ALT preprint: [arXiv:2501.09217](https://arxiv.org/abs/2501.09217)
-- 📄 ALT software description: [arXiv:2504.12841](https://arxiv.org/abs/2504.12841)
-- 🧠 Official Python package: [github.com/Datacompintensive/ALT](https://github.com/Datacompintensive/ALT)
+- **ALT Preprint**  
+  *Marcell T. Kurbucz, Balázs Hajós, Balázs P. Halmos, Vince Á. Molnár, Antal Jakovác*.  
+  *Adaptive Law-Based Transformation (ALT): A Lightweight Feature Representation for Time Series Classification.*  
+  arXiv preprint: [arXiv:2501.09217](https://arxiv.org/abs/2501.09217) (2025).
+
+- **ALT Software Package**  
+  *Balázs P. Halmos, Balázs Hajós, Vince Á. Molnár, Marcell T. Kurbucz, Antal Jakovác*.  
+  *ALT: A Python Package for Lightweight Feature Representation in Time Series Classification.*  
+  arXiv preprint: [arXiv:2504.12841](https://arxiv.org/abs/2504.12841) (2025).
+
+- **ALT Source Code**  
+  GitHub repository: [github.com/Datacompintensive/ALT](https://github.com/Datacompintensive/ALT)
 
 ---
 
@@ -87,4 +96,4 @@ Developed by members of the **Wigner Data and Compute Intensive Sciences Group**
 
 ## 📜 License
 
-Materials in this repository are provided for **educational purposes**. For usage beyond the camp, please contact the authors.
+Materials in this repository are provided for **educational purposes**.
