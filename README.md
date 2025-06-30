@@ -36,6 +36,7 @@ You should get familiar with the folders in this repository in the following ord
 | [Terminal](./Terminal) | Basic linux terminal and `vim` commands. |
 | [TestsAndDocumentation](./TestsAndDocumentation) | Describes the basic usage of `pytest` and introduces the **NumPy-style docstrings** for python functions. |
 | [ALT_intro](./ALT_intro) | Introduction to time series classification and the ALT method. |
+| [ALT](./ALT) | Describes the ALT method in detail. |
 
 ---
 
