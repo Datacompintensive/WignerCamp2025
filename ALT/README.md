@@ -54,4 +54,4 @@ The method requires only a few hyperparameters:
 ## 🚀 Try it Online
 
 Click to open the notebook in Google Colab:  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Datacompintensive/WignerCamp2025/blob/master/ALT/presentation_calulation.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Datacompintensive/WignerCamp2025/blob/master/ALT/presentation_calculation.ipynb)
