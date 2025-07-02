@@ -1,0 +1,237 @@
+\documentclass{beamer}
+\usefonttheme{serif}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow,tabularx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{siunitx}
+
+% Code listing
+\usepackage{listings}
+\lstdefinelanguage{python}{
+  morekeywords={if, then, else, fi, for, while, do, done, exit, echo, function},
+  morecomment=[l]{\#},
+  morestring=[b]",
+  sensitive=true
+}
+\lstset{
+  language=python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  breaklines=true,
+  breakatwhitespace=true,
+  frame=single,
+  backgroundcolor=\color{lightgray!20},
+  tabsize=2
+}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+% Define blue color
+\definecolor{purple}{rgb}{0.3, 0.0, 0.557}
+\definecolor{blue}{rgb}{0.0234375, 0.11328125, 0.609375}
+
+% Theme setup
+\setbeamercolor{frametitle}{fg=blue}
+\setbeamercolor{title}{fg=blue}
+\setbeamercolor{structure}{fg=blue}
+
+\title{\textcolor{blue}{Programming Tools for AI \& Data Science}}
+\subtitle{\textcolor{blue}{Wigner Summer Camp \\ Data and Compute Intensive Sciences Research Group}}
+\author{\textcolor{blue}{Balázs, Paszkál, Vince, Levente, Antal \\ Éva, Hajni}}
+\date{\textcolor{blue}{7-11 July 2025}}
+
+% Footline
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,left]{page number in head/foot}%
+    \hspace{1em} \textcolor{blue}{\insertframenumber}%
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \begin{columns}
+    \column{0.3\textwidth}
+    \column{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/logo.png}
+    \column{0.3\textwidth}
+  \end{columns}
+\end{frame}
+
+%-----------------------------
+\section{Introduction}
+%-----------------------------
+
+\begin{frame}{Why These Tools?}
+  \begin{itemize}
+    \item \textbf{Python}: Foundation for all other tools (syntax, control flow).
+    \item \textbf{NumPy}: Efficient numerical operations (linear algebra, arrays).
+    \item \textbf{PyTorch}: Deep learning framework (GPU acceleration, autograd).
+    \item \textbf{Pandas}: Data manipulation (cleaning, analysis).
+    \item \textbf{Matplotlib}: Visualization (plots, graphs).
+  \end{itemize}
+  \vspace{1em}
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/ai_stack.png}  % Replace with your own diagram
+\end{frame}
+
+%-----------------------------
+\section{Python Basics}
+%-----------------------------
+
+\begin{frame}{Python Basics}
+  \begin{itemize}
+    \item \textbf{What it covers}:
+      \begin{itemize}
+        \item Variables, loops, functions.
+        \item Lists, dictionaries, comprehensions.
+      \end{itemize}
+    \item \textbf{AI relevance}:
+      \begin{itemize}
+        \item Core syntax for implementing algorithms.
+        \item Data structures for preprocessing.
+      \end{itemize}
+  \end{itemize}
+  \begin{example}[List Comprehension]
+    \begin{lstlisting}
+    squares = [x**2 for x in range(10)]  # [0, 1, 4, ..., 81]
+    \end{lstlisting}
+  \end{example}
+\end{frame}
+
+%-----------------------------
+\section{NumPy}
+%-----------------------------
+
+\begin{frame}{NumPy: Numerical Computing}
+  \begin{itemize}
+    \item \textbf{What it does}:
+      \begin{itemize}
+        \item Multi-dimensional arrays (\texttt{ndarray}).
+        \item Broadcasting, vectorized operations.
+      \end{itemize}
+    \item \textbf{AI relevance}:
+      \begin{itemize}
+        \item Basis for PyTorch/TensorFlow.
+        \item Fast matrix operations (e.g., dot products).
+      \end{itemize}
+  \end{itemize}
+  \begin{example}[Matrix Multiplication]
+    \begin{lstlisting}
+    import numpy as np
+    A = np.array([[1, 2], [3, 4]])
+    B = np.array([[5, 6], [7, 8]])
+    C = A @ B  # [[19, 22], [43, 50]]
+    \end{lstlisting}
+  \end{example}
+\end{frame}
+
+%-----------------------------
+\section{PyTorch}
+%-----------------------------
+
+\begin{frame}{PyTorch: Deep Learning}
+  \begin{itemize}
+    \item \textbf{What it does}:
+      \begin{itemize}
+        \item Tensors with GPU support.
+        \item Autograd for backpropagation.
+      \end{itemize}
+    \item \textbf{AI relevance}:
+      \begin{itemize}
+        \item Neural networks (CNNs, RNNs).
+        \item Eigenvalue decomposition (e.g., PCA).
+      \end{itemize}
+  \end{itemize}
+  \begin{example}[GPU Tensor]
+    \begin{lstlisting}
+    import torch
+    x = torch.tensor([1., 2.], device='cuda')  # Move to GPU
+    \end{lstlisting}
+  \end{example}
+\end{frame}
+
+%-----------------------------
+\section{Pandas}
+%-----------------------------
+
+\begin{frame}{Pandas: Data Wrangling}
+  \begin{itemize}
+    \item \textbf{What it does}:
+      \begin{itemize}
+        \item \texttt{DataFrame} (tabular data).
+        \item Merging, filtering, grouping.
+      \end{itemize}
+    \item \textbf{AI relevance}:
+      \begin{itemize}
+        \item Preprocessing datasets (CSV, JSON).
+        \item Feature engineering.
+      \end{itemize}
+  \end{itemize}
+  \begin{example}[CSV Loading]
+    \begin{lstlisting}
+    import pandas as pd
+    data = pd.read_csv('dataset.csv', sep=';')
+    \end{lstlisting}
+  \end{example}
+\end{frame}
+
+%-----------------------------
+\section{Matplotlib}
+%-----------------------------
+
+\begin{frame}{Matplotlib: Visualization}
+  \begin{itemize}
+    \item \textbf{What it does}:
+      \begin{itemize}
+        \item Line plots, histograms, scatter plots.
+        \item Customizable styles (colors, markers).
+      \end{itemize}
+    \item \textbf{AI relevance}:
+      \begin{itemize}
+        \item Debugging model performance.
+        \item Visualizing embeddings (t-SNE, PCA).
+      \end{itemize}
+  \end{itemize}
+  \begin{example}[Simple Plot]
+    \begin{lstlisting}
+    import matplotlib.pyplot as plt
+    plt.plot([1, 2, 3], [4, 5, 6], 'ro-')
+    plt.show()
+    \end{lstlisting}
+  \end{example}
+\end{frame}
+
+%-----------------------------
+\section{Summary}
+%-----------------------------
+
+\begin{frame}{Key Takeaways}
+  \begin{itemize}
+    \item \textbf{Python}: Glue language for AI pipelines.
+    \item \textbf{NumPy/PyTorch}: Math backbone (CPU/GPU).
+    \item \textbf{Pandas}: Clean and structure data.
+    \item \textbf{Matplotlib}: Communicate results.
+  \end{itemize}
+  \vspace{1em}
+  \centering
+  \includegraphics[width=0.6\textwidth]{img/workflow.png}  % Replace with your workflow diagram
+\end{frame}
+
+\end{document}
