@@ -34,7 +34,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">10:00-10:30</td>
-            <td rowspan="5">Basic Programming</td>
+            <td rowspan="5"><a href="./BasicProgramming/">Basic Programming</a> + Short introduction to Git & GitHub</td>
             <td rowspan="2">ALT introduction - Find the smallest eigenvector</td>
         </tr>
         <tr>
@@ -67,14 +67,13 @@ The camp is designed for high school students and introduces the mathematical an
         <tr>
             <td class="time-column">13:30-14:00</td>
             <td rowspan="3">Introduction to Linear Algebra</td>
-            <td>Short introduction to Git & GitHub</td>
+            <td rowspan="3">Running ALT on TSC <i>(& choosing r, l, k values)</i></td>
             <td rowspan="3">Non project related activity (visiting nuclear reactor)</td>
             <td rowspan="6">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>
         <tr>
             <td class="time-column">14:00-14:30</td>
-            <td rowspan="2">Running ALT on TSC <i>(& choosing r, l, k values)</i></td>
         </tr>
         <tr>
             <td class="time-column">14:30-15:00</td>
