@@ -26,7 +26,7 @@
 \lstdefinelanguage{bash}{
   morekeywords={if, then, else, fi, for, while, do, done, exit, echo, function},
   morecomment=[l]{\#},
-  morestring=[b]",
+  morestring=[b],
   sensitive=true
 }
 
@@ -52,7 +52,7 @@
 \title{\textcolor{blue}{Percentiles and linear recursion}}
 \subtitle{\textcolor{blue}{Wigner Summer Camp \\ Data and Compute Intensive Sciences Research Group}}
 \author{\textcolor{blue}{Bal\'azs, Paszk\'al, Vince, Levente, \\ Antal \\ \'Eva, Hajni}}
-\date{\textcolor{blue}{7-11 July 2025}}
+\date{\textcolor{blue}{7--11 July 2025}}
 
 \setbeamertemplate{footline}{
   \leavevmode%
@@ -78,6 +78,7 @@
 
 \begin{frame}
   \titlepage
+
   \begin{columns}
     \column{0.3\textwidth}
     \column{0.3\textwidth}
@@ -203,7 +204,7 @@ Sorted data: 0, 0, 0, 1, 1, 2, 3
   \item A sequence where each element is a linear combination of previous elements.
   \item General form:
   \begin{equation}
-    x_n = w_1 x_{n-1} + w_2 x_{n-2} + \dots + w_k x_{n-k}.
+    x_n = w_1 x_{n-1} + w_2 x_{n-2} + \cdots + w_k x_{n-k}.
   \end{equation}
   \item Requires initial values \( x_0, \dots, x_{k-1} \).
   \item Typically, \( x_n, w_i \in \mathbb{R} \) (real numbers), but \( x_n \in \mathbb{Z} \) or complex values are also common in specific applications.
