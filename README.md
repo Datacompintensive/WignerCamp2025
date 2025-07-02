@@ -8,13 +8,6 @@ The camp is designed for high school students and introduces the mathematical an
 
 ## ⏰ Recommended timeline
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timetable</title>
-</head>
 <body>
     <table>
         <tr>
@@ -26,158 +19,78 @@ The camp is designed for high school students and introduces the mathematical an
             <th>Day 5</th>
         </tr>
         <tr>
-            <td class="time-column">9:00-9:15</td>
-            <td rowspan="2">Opening Ceremony</td>
-            <td rowspan="8">Basic Programming II²</td>
-            <td></td>
-            <td></td>
-            <td rowspan="6">Creating presentation</td>
+            <td class="time-column">9:00-9:30</td>
+            <td>Opening Ceremony</td>
+            <td>Revision Exercises</td>
+            <td>Introduction to the choosen topic</td>
+            <td rowspan="7">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
+            <td rowspan="4">Creating Presentation</td>
         </tr>
         <tr>
-            <td class="time-column">9:15-9:30</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">9:30-9:45</td>
-            <td rowspan="2">Introduction</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">9:45-10:00</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">10:00-10:15</td>
-            <td rowspan="6">Introduction to Linear Algebra</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">10:15-10:30</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">10:30-10:45</td>
-            <td></td>
-            <td></td>
-            <td rowspan="4">Finalizing presentation</td>
-        </tr>
-        <tr>
-            <td class="time-column">10:45-11:00</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">11:00-11:15</td>
-            <td rowspan="6">ALT introduction - Eigenvectors</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">11:15-11:30</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">11:30-11:45</td>
-            <td>Revision, short test</td>
-            <td></td>
-            <td></td>
-            <td rowspan="4">Presentation practice</td>
-        </tr>
-        <tr>
-            <td class="time-column">11:45-12:00</td>
-            <td rowspan="3">Mathematical foundations of TSC</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">12:00-12:15</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">12:15-12:30</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">12:30-12:45</td>
-            <td rowspan="3">Lunch</td>
-            <td rowspan="3">Lunch</td>
-            <td rowspan="3">Lunch</td>
-            <td rowspan="3">Lunch</td>
-            <td rowspan="3">Lunch</td>
-        </tr>
-        <tr>
-            <td class="time-column">12:45-13:00</td>
-        </tr>
-        <tr>
-            <td class="time-column">13:00-13:15</td>
-        </tr>
-        <tr>
-            <td class="time-column">13:15-13:30</td>
+            <td class="time-column">9:30-10:00</td>
+            <td>Introduction</td>
             <td>Introduction to VIM</td>
-            <td rowspan="5">ALT introduction - Feature extraction</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td rowspan="6">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
-            <td class="time-column">13:30-13:45</td>
-            <td rowspan="4">Basic Programming I¹</td>
-            <td rowspan="10">Non project related activity (visiting nuclear reactor)</td>
-            <td></td>
+            <td class="time-column">10:00-10:30</td>
+            <td rowspan="5">Basic Programming</td>
+            <td rowspan="2">ALT introduction - Find the smallest eigenvector</td>
+        </tr>
+        <tr>
+            <td class="time-column">10:30-11:00</td>
+        </tr>
+        <tr>
+            <td class="time-column">11:00-11:30</td>
+            <td>ALT introduction - Feature Extraction</td>
+            <td rowspan="2">Finalizing Presentation</td>
+        </tr>
+        <tr>
+            <td class="time-column">11:30-12:00</td>
+            <td rowspan="2">The Method - ALT</td>
+        </tr>
+        <tr>
+            <td class="time-column">12:00-12:30</td>
+            <td>Practice Presentation</td>
+        </tr>
+        <tr>
+            <td class="time-column">12:30-13:00</td>
+            <td rowspan="2">Lunch</td>
+            <td rowspan="2">Lunch</td>
+            <td rowspan="2">Lunch</td>
+            <td rowspan="2">Lunch</td>
+            <td rowspan="2">Lunch</td>
+        </tr>
+        <tr>
+            <td class="time-column">13:00-13:30</td>
+        </tr>
+        <tr>
+            <td class="time-column">13:30-14:00</td>
+            <td rowspan="3">Introduction to Linear Algebra</td>
+            <td>Short introduction to Git & GitHub</td>
+            <td rowspan="3">Non project related activity (visiting nuclear reactor)</td>
+            <td rowspan="6">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>
         <tr>
-            <td class="time-column">13:45-14:00</td>
-            <td></td>
+            <td class="time-column">14:00-14:30</td>
+            <td rowspan="2">Running ALT on TSC <i>(& choosing r, l, k values)</i></td>
         </tr>
         <tr>
-            <td class="time-column">14:00-14:15</td>
-            <td></td>
+            <td class="time-column">14:30-15:00</td>
         </tr>
         <tr>
-            <td class="time-column">14:15-14:30</td>
-            <td></td>
+            <td class="time-column">15:00-15:30</td>
+            <td rowspan="2">Introduction to Percentiles and Linear Recursion <br> Introduction to TSC</td>
+            <td rowspan="3">Writing tests for ALT</td>
+            <td rowspan="2">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
-            <td class="time-column">14:30-14:45</td>
-            <td rowspan="6">Computing Exercises</td>
-            <td rowspan="6">The Method - Adaptive Law-based Transformation</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">14:45-15:00</td>
-            <td></td>
-        <tr>
-            <td class="time-column">15:00-15:15</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">15:15-15:30</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">15:30-15:45</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="time-column">15:45-16:00</td>
-            <td></td>
+            <td class="time-column">15:30-16:00</td>
         </tr>
     </table>
 </body>
 </html>
-
-¹ *Basic Programming I* includes the modules based on the need of the *Computing Exercises* - Python, Pytorch and Pandas.
-
-² *Basic Programming II* includes Numpy and Matplotlib.
 
 ## 🔍 About the Method
 
