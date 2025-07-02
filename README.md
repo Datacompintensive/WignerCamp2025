@@ -28,7 +28,7 @@ The camp is designed for high school students and introduces the mathematical an
         <tr>
             <td class="time-column">9:00-9:15</td>
             <td rowspan="2">Opening Ceremony</td>
-            <td rowspan="8">Basic Programming II</td>
+            <td rowspan="8">Basic Programming II²</td>
             <td></td>
             <td></td>
             <td></td>
@@ -140,7 +140,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">13:30-13:45</td>
-            <td rowspan="4">Basic Programming I</td><td></td>
+            <td rowspan="4">Basic Programming I¹</td><td></td>
             <td></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>
@@ -194,6 +194,10 @@ The camp is designed for high school students and introduces the mathematical an
 </body>
 </html>
 
+¹ *Basic Programming I* includes the modules based on the need of the *Computing Exercises* - Python, Pytorch and Pandas.
+
+² *Basic Programming II* includes Numpy and Matplotlib.
+
 ## 🔍 About the Method
 
 The core method of the camp is the **Adaptive Law-based Transformation (ALT)** — a lightweight, interpretable, and efficient feature representation technique for time series classification. ALT builds on the earlier LLT method and provides state-of-the-art performance with minimal tuning.
@@ -228,9 +232,9 @@ You should get familiar with the folders in this repository in the following ord
 
 | Folder | Description |
 |--------|-------------|
-| [BasicProgramming](./BasicProgramming) | Exercises and materials on basic Python programming. |
-| [Mathematics](./Mathematics) | Linear algebra essentials for data transformations. |
-| [Terminal](./Terminal) | Basic linux terminal and `vim` commands. |
+| [BasicProgramming](./BasicProgramming) | Exercises and materials on the basics of Python programming and data processing. |
+| [Mathematics](./Mathematics) | Linear algebra essentials for data transformations and the mathematical background of Time Series Classification. |
+| [Terminal](./Terminal) | Basic `linux` terminal and `vim` commands. |
 | [TestsAndDocumentation](./TestsAndDocumentation) | Describes the basic usage of `pytest` and introduces the **NumPy-style docstrings** for python functions. |
 | [ALT_intro](./ALT_intro) | Introduction to time series classification and the ALT method. |
 | [ALT](./ALT) | Describes the ALT method in detail. |
