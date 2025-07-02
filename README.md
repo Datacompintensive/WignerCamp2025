@@ -6,6 +6,194 @@ The camp is designed for high school students and introduces the mathematical an
 
 ---
 
+## ⏰ Recommended timeline
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+        </tr>
+        <tr>
+            <td class="time-column">9:00-9:15</td>
+            <td rowspan="2">Opening Ceremony</td>
+            <td rowspan="8">Basic Programming II</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">9:15-9:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">9:30-9:45</td>
+            <td rowspan="2">Introduction</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">9:45-10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">10:00-10:15</td>
+            <td rowspan="6">Introduction to Linear Algebra</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">10:15-10:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">10:30-10:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">10:45-11:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">11:00-11:15</td>
+            <td rowspan="6">ALT introduction - Eigenvectors</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">11:15-11:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">11:30-11:45</td>
+            <td>Revision, short test</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">11:45-12:00</td>
+            <td rowspan="3">Mathematical foundations of TSC</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">12:00-12:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">12:15-12:30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">12:30-12:45</td>
+            <td rowspan="3">Lunch</td>
+            <td rowspan="3">Lunch</td>
+            <td rowspan="3">Lunch</td>
+            <td rowspan="3">Lunch</td>
+            <td rowspan="3">Lunch</td>
+        </tr>
+        <tr>
+            <td class="time-column">12:45-13:00</td>
+        </tr>
+        <tr>
+            <td class="time-column">13:00-13:15</td>
+        </tr>
+        <tr>
+            <td class="time-column">13:15-13:30</td>
+            <td>Introduction to VIM</td>
+            <td rowspan="5">ALT introduction - Feature extraction</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">13:30-13:45</td>
+            <td rowspan="4">Basic Programming I</td><td></td>
+            <td></td>
+            <td  rowspan="10">Closing & presentation</td>
+        </tr>
+        <tr>
+            <td class="time-column">13:45-14:00</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">14:00-14:15</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">14:15-14:30</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">14:30-14:45</td>
+            <td rowspan="6">Computing Exercises</td>
+            <td rowspan="6">The Method - Adaptive Law-based Transformation</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">14:45-15:00</td>
+            <td></td>
+            <td></td>
+        <tr>
+            <td class="time-column">15:00-15:15</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">15:15-15:30</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">15:30-15:45</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-column">15:45-16:00</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
+
 ## 🔍 About the Method
 
 The core method of the camp is the **Adaptive Law-based Transformation (ALT)** — a lightweight, interpretable, and efficient feature representation technique for time series classification. ALT builds on the earlier LLT method and provides state-of-the-art performance with minimal tuning.
