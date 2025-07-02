@@ -1,0 +1,254 @@
+\documentclass{beamer}
+\usefonttheme{serif} % default family is serif
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow,tabularx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[font=small,skip=2pt]{caption}
+\setlength{\belowcaptionskip}{-10pt}
+\definecolor{blue}{rgb}{0.0234375, 0.11328125, 0.609375}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\setbeamercolor{frametitle}{fg=blue}
+\setbeamercolor{title}{fg=blue}
+\setbeamercolor{structure}{fg=blue}
+
+\usepackage{xcolor}
+
+% Define Bash syntax highlighting
+\lstdefinelanguage{bash}{
+  morekeywords={if, then, else, fi, for, while, do, done, exit, echo, function},
+  morecomment=[l]{\#},
+  morestring=[b]",
+  sensitive=true
+}
+
+% Define listing style
+\lstset{
+  language=bash,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  breaklines=true,
+  breakatwhitespace=true,
+  frame=single,
+  backgroundcolor=\color{lightgray!20},
+  tabsize=2
+}
+
+
+\title{\textcolor{blue}{Percentiles and linear recursion}}
+\subtitle{\textcolor{blue}{Wigner Summer Camp \\ Data and Compute Intensive Sciences Research Group}}
+\author{\textcolor{blue}{Bal\'azs, Paszk\'al, Vince, Levente, \\ Antal \\ \'Eva, Hajni}}
+\date{\textcolor{blue}{7-11 July 2025}}
+
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,left]{page number in head/foot}%
+    \hspace{1em} \textcolor{blue}{\insertframenumber}%
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \begin{columns}
+    \column{0.3\textwidth}
+    \column{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/logo.png}
+    \column{0.3\textwidth}
+  \end{columns}
+\end{frame}
+
+% --------------------------------------------
+\begin{frame}{Table of Contents}
+  \tableofcontents
+\end{frame}
+
+% --------------------------------------------
+\section{Percentiles}
+\begin{frame}{What are Percentiles?}
+\begin{itemize}
+  \item A percentile indicates the value below which a given percentage of observations fall.
+  \item For example, the 25th percentile (Q1) is the value below which 25\% of the data fall.
+  \item Common percentiles: 25th (Q1), 50th (median), 75th (Q3).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Numerical Example}
+Given the data: 1, 3, 4, 7, 8, 10, 12.
+\begin{itemize}
+  \item 25th percentile \( \Rightarrow 3.5 \) (using linear interpolation, see next slide).
+  \item 50th percentile (median) \( \Rightarrow 7 \).
+  \item 75th percentile \( \Rightarrow 9 \).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Calculating Percentiles in PyTorch}
+\begin{lstlisting}[language=python]
+torch.quantile(tensor, q=0.25,
+        interpolation='linear')
+\end{lstlisting}
+\begin{itemize}
+  \item To compute the quantile, we map \( q \in [0, 1] \) to a quantile index \( i_q = q \cdot (n - 1) \), where \( n \) is the number of data points.
+  \item Let \( i = \lfloor i_q \rfloor \), \( j = \lceil i_q \rceil \), with sorted data values \( a = x_i \) and \( b = x_j \).
+  \item Define \( f = i_q - i \), the fractional part.
+  \item Result is then computed as:
+  \begin{itemize}
+    \item Linear: \( a + (b - a) \cdot f \).
+    \item Lower: \( a \).
+    \item Higher: \( b \).
+    \item Nearest: \( a \) or \( b \), whichever index is closer to \( i_q \) (rounding down at \( 0.5 \)).
+    \item Midpoint: \( (a + b)/2 \).
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{Interpolation Methods: Example}
+Data: 10, 20, 30, 40. Then
+
+\begin{itemize}
+  \item 25th percentile lies between 10 and 20.
+  \begin{itemize}
+    \item Linear: \( 10 + (20 - 10) \cdot 0.25 = 12.5 \).
+    \item Lower: \( 10 \).
+    \item Higher: \( 20 \).
+    \item Nearest: \( 10 \).
+    \item Midpoint: \( (10 + 20)/2 = 15 \).
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 1: Skewed Toward Low Values}
+Given the data: 1, 1, 1, 2, 3, 4, 10
+
+\begin{itemize}
+  \item Calculate the 25th, 50th, and 75th percentiles.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Solution to Exercise 1}
+Sorted data: 1, 1, 1, 2, 3, 4, 10
+\begin{itemize}
+  \item 25th percentile: Between 1 and 1 \( \Rightarrow 1 \)
+  \item 50th percentile: Middle value = 2
+  \item 75th percentile: Between 4 and 10 \( \Rightarrow 4 + 0.25\cdot(10-4) = 5.5 \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 2: Skewed Toward High Values}
+Given the data: 1, 6, 7, 8, 9, 9, 9
+
+\begin{itemize}
+  \item Calculate the 25th, 50th, and 75th percentiles.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Solution to Exercise 2}
+Sorted data: 1, 6, 7, 8, 9, 9, 9
+\begin{itemize}
+  \item 25th percentile: Between 1 and 6 \( \Rightarrow 1 + 0.5\cdot(6-1) = 3.5 \)
+  \item 50th percentile: Middle value = 8
+  \item 75th percentile: Between 9 and 9 \( \Rightarrow 9 \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 3: Values Near Zero}
+Given the data: 0, 0, 0, 1, 1, 2, 3
+
+\begin{itemize}
+  \item Calculate the 25th, 50th, and 75th percentiles.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Solution to Exercise 3}
+Sorted data: 0, 0, 0, 1, 1, 2, 3
+\begin{itemize}
+  \item 25th percentile: Between 0 and 0 \( \Rightarrow 0 \)
+  \item 50th percentile: Middle value = 1
+  \item 75th percentile: Between 1 and 2 \( \Rightarrow 1 + 0.25\cdot(2-1) = 1.25 \)
+\end{itemize}
+\end{frame}
+
+% --------------------------------------------
+\section{Linear Recursions}
+\begin{frame}{What is a Linear Recursion?}
+\begin{itemize}
+  \item A sequence where each element is a linear combination of previous elements.
+  \item General form:
+  \begin{equation}
+    x_n = w_1 x_{n-1} + w_2 x_{n-2} + \dots + w_k x_{n-k}.
+  \end{equation}
+  \item Requires initial values \( x_0, \dots, x_{k-1} \).
+  \item Typically, \( x_n, w_i \in \mathbb{R} \) (real numbers), but \( x_n \in \mathbb{Z} \) or complex values are also common in specific applications.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Famous Examples}
+\begin{itemize}
+  \item Fibonacci sequence:
+  \begin{equation}
+    x_n = x_{n-1} + x_{n-2}, \quad x_0 = 0,\ x_1 = 1.
+  \end{equation}
+  \item Exponential growth: \( x_n = a x_{n-1}, a > 1. \)
+  \item Weighted average: \( x_n = 0.8 x_{n-1} + 0.2 x_{n-2} \).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Effect of Weights and Initial Values}
+\begin{itemize}
+  \item Weights determine how past values influence the future.
+  \item Initial values can lead to different growth or oscillation patterns.
+  \item Some sequences stabilize, others diverge.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recursions and Discretizing Functions}
+\begin{itemize}
+  \item Recursions can approximate continuous functions.
+\end{itemize}
+\end{frame}
+
+\section*{Summary}
+\begin{frame}{Summary}
+\begin{itemize}
+  \item \textbf{Percentiles} help understand the distribution of data, identifying values below which a given percentage of data falls.
+  \begin{itemize}
+    \item Different interpolation methods influence the computed percentile value.
+    \item PyTorch supports flexible percentile computations.
+  \end{itemize}
+  \item \textbf{Linear recursions} generate sequences based on weighted combinations of previous values.
+  \begin{itemize}
+    \item Used to model growth, oscillations, or smooth approximations.
+    \item Provide a bridge between discrete sequences and continuous functions.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
