@@ -160,7 +160,7 @@
     \end{equation}
     \item \textbf{Notation:}
     \begin{itemize}
-      \item Boldface: $\mathbf{v}$ (common in CS)
+      \item Boldface: $\mathbf{v}$ (common in CS and mathematical books)
       \item Arrow: $\vec{v}$ (common in physics)
       \item Angled brackets or parentheses
     \end{itemize}
@@ -242,7 +242,7 @@
     \begin{equation}
     A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}.
     \end{equation}
-    \item Multiply:
+    \item Multiplication:
     \begin{equation}
     A\vec{v} = \begin{bmatrix}
     1\cdot2 + 2\cdot1 \\
@@ -332,17 +332,55 @@
 
 \begin{frame}{Matrix-Matrix Multiplication}
   Procedure is the same as the Vector-Matrix multiplication. If an \(n\cross m\) matrix is multiplied by an \(m\cross k\), the result is an \(n\cross k\) matrix.
+  \item The number of columns in the first matrix must be equal to the number of rows in the second matrix.
+  \[
+  A = \begin{bmatrix}
+  a_{11} & a_{12} \\
+  a_{21} & a_{22}
+  \end{bmatrix},
+  \quad
+  B = \begin{bmatrix}
+  b_{11} & b_{12} \\
+  b_{21} & b_{22}
+  \end{bmatrix}
+  \]
+
+  \[
+  C = A \cdot B =
+  \begin{bmatrix}
+  c_{11} & c_{12} \\
+  c_{21} & c_{22}
+  \end{bmatrix}
+  \]
+
+  \[
+  \begin{aligned}
+  c_{11} &= a_{11} \cdot b_{11} + a_{12} \cdot b_{21} \\
+  c_{12} &= a_{11} \cdot b_{12} + a_{12} \cdot b_{22} \\
+  c_{21} &= a_{21} \cdot b_{11} + a_{22} \cdot b_{21} \\
+  c_{22} &= a_{21} \cdot b_{12} + a_{22} \cdot b_{22}
+  \end{aligned}
+  \]
+\end{frame}
+
+\begin{frame}{Example exercises for matrix-matrix multiplication}
   \begin{example}
-  \begin{equation}
-  A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}
-  \Rightarrow AB = \begin{bmatrix} 4 & 4 \\ 10 & 8 \end{bmatrix}
-  \end{equation}
+    \begin{equation}
+      A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}
+      \Rightarrow A\cdot B = \begin{bmatrix} 4 & 4 \\ 10 & 8 \end{bmatrix}
+    \end{equation}
   \end{example}
   \begin{example}
-  \begin{equation}
-  A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}, B = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{bmatrix}
-  \Rightarrow AB = \begin{bmatrix} 4 & 5 \\ 10 & 11 \end{bmatrix}
-  \end{equation}
+    \begin{equation}
+      A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}, B = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{bmatrix}
+      \Rightarrow A\cdot B = \begin{bmatrix} 4 & 5 \\ 10 & 11 \end{bmatrix}
+    \end{equation}
+  \end{example}
+  \begin{example}
+    \begin{equation}
+      A = \begin{bmatrix} 8 & 4 & 11 & 5 \\ 4 & 4 & 21 & 6 \\ 6 & 9 & 11 & 8 \end{bmatrix}, B = \begin{bmatrix} 3 & 2 \\ 4 & 6 \\ 1 & 4 \\ 7 & 2 \end{bmatrix}
+      \Rightarrow A\cdot B = \begin{bmatrix} 86 & 94 \\ 91 & 128 \\ 121 & 126\end{bmatrix}
+    \end{equation}
   \end{example}
 \end{frame}
 
@@ -372,7 +410,7 @@
     \item The set of all eigenvectors corresponding to a single eigenvalue forms a vector subspace.
     \item A square matrix of size $n \times n$ has at most $n$ eigenvalues (including complex ones and multiplicities).
     \item If all eigenvalues of a matrix are positive, the matrix is positive definite.
-    \item Diagonal matrices have their diagonal elements as eigenvalues, and the standard basis vectors as eigenvectors.
+    \item Diagonal matrices (matrixes where for all $a_{ij}=0$ where $i\neg j$) have their diagonal elements as eigenvalues, and the standard basis vectors as eigenvectors.
     \item The eigenvalues of a complex Hermitian or real symmetric matrix are real.
   \end{itemize}
 \end{frame}
