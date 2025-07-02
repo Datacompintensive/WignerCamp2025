@@ -31,11 +31,10 @@ The camp is designed for high school students and introduces the mathematical an
             <td rowspan="8">Basic Programming II²</td>
             <td></td>
             <td></td>
-            <td></td>
+            <td rowspan="6">Creating presentation</td>
         </tr>
         <tr>
             <td class="time-column">9:15-9:30</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -44,11 +43,9 @@ The camp is designed for high school students and introduces the mathematical an
             <td rowspan="2">Introduction</td>
             <td></td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">9:45-10:00</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -57,11 +54,9 @@ The camp is designed for high school students and introduces the mathematical an
             <td rowspan="6">Introduction to Linear Algebra</td>
             <td></td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">10:15-10:30</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -69,11 +64,10 @@ The camp is designed for high school students and introduces the mathematical an
             <td class="time-column">10:30-10:45</td>
             <td></td>
             <td></td>
-            <td></td>
+            <td rowspan="4">Finalizing presentation</td>
         </tr>
         <tr>
             <td class="time-column">10:45-11:00</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -82,11 +76,9 @@ The camp is designed for high school students and introduces the mathematical an
             <td rowspan="6">ALT introduction - Eigenvectors</td>
             <td></td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">11:15-11:30</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -95,12 +87,11 @@ The camp is designed for high school students and introduces the mathematical an
             <td>Revision, short test</td>
             <td></td>
             <td></td>
-            <td></td>
+            <td rowspan="4">Presentation practice</td>
         </tr>
         <tr>
             <td class="time-column">11:45-12:00</td>
             <td rowspan="3">Mathematical foundations of TSC</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -108,11 +99,9 @@ The camp is designed for high school students and introduces the mathematical an
             <td class="time-column">12:00-12:15</td>
             <td></td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">12:15-12:30</td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -140,23 +129,21 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">13:30-13:45</td>
-            <td rowspan="4">Basic Programming I¹</td><td></td>
+            <td rowspan="4">Basic Programming I¹</td>
+            <td rowspan="10">Non project related activity (visiting nuclear reactor)</td>
             <td></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>
         <tr>
             <td class="time-column">13:45-14:00</td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">14:00-14:15</td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">14:15-14:30</td>
-            <td></td>
             <td></td>
         </tr>
         <tr>
@@ -164,30 +151,24 @@ The camp is designed for high school students and introduces the mathematical an
             <td rowspan="6">Computing Exercises</td>
             <td rowspan="6">The Method - Adaptive Law-based Transformation</td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">14:45-15:00</td>
             <td></td>
-            <td></td>
         <tr>
             <td class="time-column">15:00-15:15</td>
-            <td></td>
             <td></td>
         </tr>
         <tr>
             <td class="time-column">15:15-15:30</td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">15:30-15:45</td>
             <td></td>
-            <td></td>
         </tr>
         <tr>
             <td class="time-column">15:45-16:00</td>
-            <td></td>
             <td></td>
         </tr>
     </table>
