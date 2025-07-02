@@ -193,7 +193,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Dot Product - Practice Exercises}
+\begin{frame}{Dot Product – Practice Exercises}
   \begin{itemize}
     \item Calculate the dot product of the following vector pairs:
     \begin{enumerate}
@@ -203,7 +203,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Dot Product - Solutions}
+\begin{frame}{Dot Product – Solutions}
   \begin{itemize}
     \item \textbf{Solution to (a):}
     \[
@@ -253,7 +253,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Vector-Matrix Multiplication - Exercises}
+\begin{frame}{Vector-Matrix Multiplication – Exercises}
   \begin{itemize}
     \item Multiply the vector $\vec{v}$ with matrix $M$ in the following examples:
     \begin{enumerate}
@@ -279,7 +279,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Vector-Matrix Multiplication - Solutions}
+\begin{frame}{Vector-Matrix Multiplication – Solutions}
   \begin{enumerate}
     \item General case:
     \begin{equation}
@@ -333,42 +333,18 @@
 \begin{frame}{Matrix-Matrix Multiplication}
   Procedure is the same as the Vector-Matrix multiplication. If an \(n\cross m\) matrix is multiplied by an \(m\cross k\), the result is an \(n\cross k\) matrix.
   \begin{itemize}
-  \begin{itemize}
-    	\item The number of columns in the first matrix must be equal to the number of rows in the second matrix.
+  	\item The number of columns in the first matrix must be equal to the number of rows in the second matrix.
   \end{itemize}
-  \end{itemize}
-  
   \[
-  A = \begin{bmatrix}
-  a_{11} & a_{12} \\
-  a_{21} & a_{22}
-  \end{bmatrix},
+  A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix},
   \quad
-  B = \begin{bmatrix}
-  b_{11} & b_{12} \\
-  b_{21} & b_{22}
-  \end{bmatrix}
+  B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix}
   \]
 
   \[
-  C = A \cdot B =
-  \begin{bmatrix}
-  c_{11} & c_{12} \\
-  c_{21} & c_{22}
-  \end{bmatrix}
+  A\cdot B =  \begin{bmatrix} {a_{11} \cdot b_{11} + a_{12} \cdot b_{21}} & {a_{11} \cdot b_{12} + a_{12} \cdot b_{22}} \\ {a_{21} \cdot b_{11} + a_{22} \cdot b_{21}} & {a_{21} \cdot b_{12} + a_{22} \cdot b_{22}} \end{bmatrix}
   \]
 
-  \[
-  \begin{aligned}
-  c_{11} &= a_{11} \cdot b_{11} + a_{12} \cdot b_{21} \\
-  c_{12} &= a_{11} \cdot b_{12} + a_{12} \cdot b_{22} \\
-  c_{21} &= a_{21} \cdot b_{11} + a_{22} \cdot b_{21} \\
-  c_{22} &= a_{21} \cdot b_{12} + a_{22} \cdot b_{22}
-  \end{aligned}
-  \]
-\end{frame}
-
-\begin{frame}{Example exercises for matrix-matrix multiplication}
   \begin{example}
 	\begin{equation}
 		A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}
@@ -411,7 +387,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Eigenvalues and Eigenvectors - Properties}
+\begin{frame}{Eigenvalues and Eigenvectors – Properties}
   \begin{itemize}
     \item If $A \vec{v} = \lambda \vec{v}$, then $\vec{v}$ is an eigenvector of $A$ with eigenvalue $\lambda$.
     \item Eigenvectors are defined up to a scalar: if $\vec{v}$ is an eigenvector, so is $c\vec{v}$ for any $c \neq 0$.
@@ -446,8 +422,30 @@ In this presentation you learned about:
     
 \end{frame}
 
+\begin{frame}{Extra: Matrix's determinant}
+	Mathematical definition:
+	\begin{itemize}
+		\item The determinant is a scalar-valued funcion of the entries of a square matrix $A$.
+		
+		The determinant encodes:
+		\begin{itemize}
+			\item$A$ is invertibe if $\det(A) \neq 0$
+			\item Absolute value equals the volume change under the linear transformation of $A$.
+		\end{itemize}
+	\end{itemize}
+	\textbf{Formula:}
+	\begin{itemize}
+		\item for $2$×$2$ case: $\det\begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc$
+		\item for $3$×$3$ case: $\det \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} = aei + bfg + cdh - ceg - bdi - ahf$.
+	\end{itemize}
+	\textbf{Use in AI}:
+	\begin{itemize}
+		\item Checking invertibility;
+		\item Eigenvalue Problem.
+	\end{itemize}
+\end{frame}
 
-\begin{frame}{Extra: Eigenvalue Problem: More Detail}
+\begin{frame}{Extra: Eigenvalue Problem (detailed)}
   \begin{itemize}
     \item Step 1: Start with $A\vec{v} = \lambda \vec{v}$.
     \item Step 2: Rewrite as $(A - \lambda I)\vec{v} = 0$.
