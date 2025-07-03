@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[paper=a4paper,margin=1.75cm]{geometry}
+
+\title{Linear Algebra Self-check Test - Answer Key}
+\date{07. July 2025.}
+\author{\textit{Wigner Data and Compute Intensive Sciences Research Group}}
+
+\begin{document}
+
+% Add logo to top left corner
+\begin{minipage}{0.8\textwidth}
+	\centering
+	{\Large\textbf{Linear Algebra Self-check Test with Solutions}\\ \textit{Wigner Data and Compute Intensive Sciences Group}}\\
+	\vspace*{0.25cm}
+	{\normalsize 7 July 2025}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+	\includegraphics[width=2cm]{img/logo.png}
+\end{minipage}
+
+\vspace{0.75cm}
+
+\section*{Part 1: Vectors}
+\begin{enumerate}
+\item $\begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 4 \\ -2 \end{bmatrix} = \boxed{2\cdot1 + (-1)\cdot4 + 3\cdot(-2) = 2 - 4 - 6 = -8}$
+
+\item $\begin{bmatrix} 3 \\ 0 \\ -1 \\ 2 \end{bmatrix} + \begin{bmatrix} -2 \\ 5 \\ 1 \\ 3 \end{bmatrix} = \boxed{\begin{bmatrix} 1 \\ 5 \\ 0 \\ 5 \end{bmatrix}}$ \\ 
+\end{enumerate}
+
+\section*{Part 2: Vector-Matrix Multiplication}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item $\begin{bmatrix} 1 & -2 \\ 3 & 0 \\ -1 & 4 \end{bmatrix} \begin{bmatrix} 2 \\ 1 \end{bmatrix} = \begin{bmatrix} 1\cdot2 + (-2)\cdot1 \\ 3\cdot2 + 0\cdot1 \\ (-1)\cdot2 + 4\cdot1 \end{bmatrix} = \boxed{\begin{bmatrix} 0 \\ 6 \\ 2 \end{bmatrix}}$
+
+\item $\begin{bmatrix} 3 & 0 & 1 \\ 1 & 2 & -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 3\cdot1 + 0\cdot(-1) + 1\cdot2 \\ 1\cdot1 + 2\cdot(-1) + (-1)\cdot2 \end{bmatrix} = \boxed{\begin{bmatrix} 5 \\ -5 \end{bmatrix}}$
+\end{enumerate}
+
+\section*{Part 3: Matrix-Matrix Multiplication}
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 1\cdot0+2\cdot(-1) & 1\cdot1+2\cdot2 \\ 3\cdot0+4\cdot(-1) & 3\cdot1+4\cdot2 \end{bmatrix} = \boxed{\begin{bmatrix} -2 & 5 \\ -4 & 11 \end{bmatrix}}$
+
+\item $\begin{bmatrix} 2 & 1 & 0 \\ -1 & 0 & 3 \end{bmatrix} \begin{bmatrix} 1 & 2 \\ 0 & -1 \\ 3 & 0 \end{bmatrix} = \begin{bmatrix} 2\cdot1+1\cdot0+0\cdot3 & 2\cdot2+1\cdot(-1)+0\cdot0 \\ -1\cdot1+0\cdot0+3\cdot3 & -1\cdot2+0\cdot(-1)+3\cdot0 \end{bmatrix} = \boxed{\begin{bmatrix} 2 & 3 \\ 8 & -2 \end{bmatrix}}$
+	
+\item $\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \boxed{\text{Undefined (due to not matching dimensions - 2×3 vs 2×2)}}$
+\end{enumerate}
+
+\section*{Part 4: Matrix Determinant}
+\begin{enumerate}
+	\setcounter{enumi}{7}
+	\item $\det\begin{pmatrix} 3 & 1 \\ 2 & 4 \end{pmatrix} = \boxed{3\cdot4 - 1\cdot2 = 10}$
+	
+	\item $\det\begin{pmatrix} 2 & -1 & 0 \\ 1 & 3 & 2 \\ 0 & 1 & -1 \end{pmatrix} = \boxed{2(3\cdot(-1)-2\cdot1) - (-1)(1\cdot(-1)-2\cdot0) + 0 = 2(-5) + 1(-1) = -11}$
+\end{enumerate}
+
+\newpage
+
+\section*{Part 5: Eigenproblems}
+\begin{enumerate}
+	\setcounter{enumi}{9}
+	\item For $A = \begin{bmatrix} 3 & 0 \\ 0 & -1 \end{bmatrix}$:
+	\begin{itemize}
+		\item Eigenvalues: \boxed{3}, \boxed{-1}
+		\item Corresponding eigenvectors: \boxed{\begin{bmatrix} 1 \\ 0 \end{bmatrix}}, \boxed{\begin{bmatrix} 0 \\ 1 \end{bmatrix}}
+	\end{itemize}
+	
+	\item Which vector is an eigenvector of $\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$? \\ 
+	\boxed{\text{Both}} \\
+	\textit{Verification:} \\
+	$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 3 \end{bmatrix} = 3\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ \\
+	$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix} = 1\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
+\end{enumerate}
+
+\end{document}
