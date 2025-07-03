@@ -155,6 +155,22 @@ pip install pytest
 
 ## 📄 Building LaTeX Documents
 
+### 🔧 Installing Dependencies on Linux
+To build the LaTeX documents with `CMake`, you need to have `cmake`, `pdflatex`, and `bibtex` installed. On most Linux distributions you can install them with your package manager.
+
+For example, on Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install cmake texlive-latex-base texlive-latex-recommended texlive-bibtex-extra texlive-fonts-recommended
+```
+
+- `cmake` — the build system.
+- `pdflatex` — provided by texlive-latex-base (compiles .tex to .pdf).
+- `bibtex` — provided by texlive-bibtex-extra (manages references).
+- `texlive-latex-recommended` and `texlive-fonts-recommended` — recommended LaTeX packages and fonts used by many templates.
+
+### 🔧 Compiling LaTeX Documents
+
 Some folders contain `.tex` slides or documents. To compile all LaTeX files using `CMake`:
 
 ```bash
