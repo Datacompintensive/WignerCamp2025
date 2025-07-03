@@ -13,6 +13,15 @@ This folder contains two educational LaTeX-based presentations designed for the 
 | | Provides hands on exercises for the important scientific computing concepts: dot product, vector-matrix and matrix-matrix multiplication, and precentiles. | [ComputingExercises.ipynb](ComputingExercises.ipynb) |
 | | Gives the solutions for the exercies in [ComputingExercises.ipynb](ComputingExercises.ipynb). | [ComputingExercises_solution.ipynb](ComputingExercises_solution.ipynb) |
 
+### 📝 Test files
+
+| PDF File | Description | Source File |
+|----------|-------------|-------------|
+| [linear_algebra_test.pdf](linear_algebra_test.pdf) | Self-check test covering basic linear algebra concepts including vectors, matrix operations, determinants, and eigenproblems. | [linear_algebra_test.tex](linear_algebra_test.tex) |
+| [linear_algebra_test_solution.pdf](linear_algebra_test_solution.pdf) | Detailed solutions to the self-check test with step-by-step explanations. | [linear_algebra_test_solution.tex](linear_algebra_test_solution.tex) |
+| [linear_algebra_revision_test.pdf](linear_algebra_revision_test.pdf) | More advanced revision test covering extended linear algebra concepts with higher-dimensional problems. | [linear_algebra_revision_test.tex](linear_algebra_revision_test.tex) |
+| [linear_algebra_revision_test_solution.pdf](linear_algebra_revision_test_solution.pdf) | Complete solutions to the revision test problems with verifications. | [linear_algebra_revision_test_solution.tex](linear_algebra_revision_test_solution.tex) |
+
 ## 🛠 Compilation
 
 To compile the presentations (from this directory):
