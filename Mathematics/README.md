@@ -7,8 +7,8 @@ This folder contains two educational LaTeX-based presentations designed for the 
 | PDF File | Description | Source File |
 |----------|-------------|-------------|
 | [linear_algebra.pdf](linear_algebra.pdf) | Covers basic concepts in linear algebra, including vectors, matrices, dot products, matrix multiplication, geometric interpretation, and eigendecomposition. | [linear_algebra.tex](linear_algebra.tex) |
-| [linear_algebra_test.pdf](linear_algebra_test.pdf) | Contains exercises to test the understanding no the most important linear algebra condepts. | [linear_algebra_test.tex](linear_algebra_test.tex) |
-| [TSC.pdf](TSC.pdf) | Introduces the time series classification (TSC) problem. Discusses evaluation metrics such as accuracy, precision, recall, and F1 score, with illustrative confusion matrix examples. | [TSC.tex](TSC.tex) |
+| [linear_algebra_test.pdf](linear_algebra_test.pdf) | Contains exercises to test the understanding of the most important linear algebra concepts. | [linear_algebra_test.tex](linear_algebra_test.tex) |
+| [TSC.pdf](TSC.pdf) | Introduces the time series classification (TSC) problem. Discusses evaluation metrics such as accuracy, precision, recall, and F1 score with illustrative confusion matrix examples. | [TSC.tex](TSC.tex) |
 | [miscellaneous_topics.pdf](miscellaneous_topics.pdf) | Details some of the other mathematical concepts which are useful for understanding the method: the precentiles and the linear recursions. | [miscellaneous_topics.tex](miscellaneous_topics.tex) |
 | | Provides hands on exercises for the important scientific computing concepts: dot product, vector-matrix and matrix-matrix multiplication, and precentiles. | [ComputingExercises.ipynb](ComputingExercises.ipynb) |
 | | Gives the solutions for the exercies in [ComputingExercises.ipynb](ComputingExercises.ipynb). | [ComputingExercises_solution.ipynb](ComputingExercises_solution.ipynb) |
