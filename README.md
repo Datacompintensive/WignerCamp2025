@@ -34,7 +34,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">10:00-10:30</td>
-            <td rowspan="5"><a href="./BasicProgramming/">Basic Programming</a> + Short introduction to Git & GitHub</td>
+            <td rowspan="5"><a href="./BasicProgramming/">Basic Programming</a> + <a href="./Terminal/Git.md">Short introduction to Git & GitHub</a></td>
             <td rowspan="2"><a href="./ALT_intro/Eigenvector/">ALT introduction - Find the smallest eigenvector</a></td>
         </tr>
         <tr>

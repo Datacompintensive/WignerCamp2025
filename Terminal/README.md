@@ -39,6 +39,17 @@ Useful for users who want to learn efficient text editing in the terminal.
 
 ---
 
+### 📝 [Git.md](Git.md)
+
+A basic introduction of using0 **git** and **Github**.
+
+- Creating and adding SSH keys to Github
+- Cloning and creating a repository
+- Committing changes
+- Compering file versions
+- Pushing and git conflicts
+- Branches
+
 ## ✅ Extra
 
 You can also open these files with:
