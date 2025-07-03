@@ -164,15 +164,24 @@
       \item Arrow: $\vec{v}$ (common in physics)
       \item Angled brackets or parentheses
     \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example vectors}
     \begin{example}[Vectors]
         \begin{equation}
         \vec{a} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad
         \vec{b} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
-        \vec{c} = \begin{bmatrix} -3 \\ 2 \\ 5 \end{bmatrix}, \quad
-        \vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+        \vec{c} = \begin{bmatrix} -3 \\ 2 \\ 5 \end{bmatrix}.
         \end{equation}
     \end{example}
-  \end{itemize}
+    \begin{example}[Common vectors]
+        \begin{equation}
+            \vec{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad
+            \vec{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad
+            \vec{0} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+        \end{equation}
+    \end{example}
 \end{frame}
 
 \begin{frame}{What is the Dot Product?}
@@ -416,47 +425,344 @@ In this presentation you learned about:
     
 \end{frame}
 
-\begin{frame}{Extra: Matrix's determinant}
-	Mathematical definition:
-	\begin{itemize}
-		\item The determinant is a scalar-valued function of the entries of a square matrix $A$.
-		
-		The determinant encodes:
-		\begin{itemize}
-			\item$A$ is invertibe if $\det(A) \neq 0$
-			\item Absolute value equals the volume change under the linear transformation of $A$.
-		\end{itemize}
-	\end{itemize}
-	\textbf{Formula:}
-	\begin{itemize}
-		\item for $2$×$2$ case: $\det\begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc$
-		\item for $3$×$3$ case: $\det \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix} = aei + bfg + cdh - ceg - bdi - ahf$.
-	\end{itemize}
-	\textbf{Use in AI}:
-	\begin{itemize}
-		\item Checking invertibility.
-		\item Eigenvalue Problem.
-	\end{itemize}
+\begin{frame}{What is the Determinant?}
+\begin{itemize}
+  \item The determinant is a scalar value associated with a square matrix \( A \).
+  \item It plays a key role in linear algebra:
+  \begin{itemize}
+    \item \( A \) is invertible if and only if \( \det(A) \neq 0 \).
+    \item \( |\det(A)| \) equals the volume scaling factor of the linear transformation defined by \( A \).
+  \end{itemize}
+  \item Determinants are widely used in solving linear systems, computing eigenvalues, and understanding geometric transformations.
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Extra: Eigenvalue Problem (detailed)}
-  \begin{itemize}
-    \item Step 1: Start with $A\vec{v} = \lambda \vec{v}$.
-    \item Step 2: Rewrite as $(A - \lambda I)\vec{v} = 0$.
-    \item Step 3: Solve $\det(A - \lambda I) = 0$ (this gives a polynomial).
-    \item Step 4: Find the roots (eigenvalues), then solve the nullspace for each to get eigenvectors.
-  \end{itemize}
-  \begin{example}
-    \begin{equation}
-    A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \Rightarrow
-    \det\left(\begin{bmatrix} 2 - \lambda & 1 \\ 1 & 2 - \lambda \end{bmatrix}\right) = (2 - \lambda)^2 - 1 = \lambda^2 - 4\lambda + 3.
-    \end{equation}
-    \begin{itemize}
-        \item Roots: $\lambda = 1, 3$.
-        \item For $\lambda = 3$: $(A - 3I)\vec{v} = 0 \Rightarrow \vec{v}_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}.$
-        \item For $\lambda = 1$: $(A - I)\vec{v} = 0 \Rightarrow \vec{v}_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}.$
-    \end{itemize}
-  \end{example}
+\begin{frame}{Determinant of a \(2 \times 2\) Matrix}
+\begin{itemize}
+  \item For a \(2 \times 2\) matrix
+  \begin{equation}
+    A =
+    \begin{pmatrix} a & b \\ c & d \end{pmatrix},
+  \end{equation}
+  the determinant is given by
+  \begin{equation}
+    \det(A) = ad - bc. \label{eq:det2x2}
+  \end{equation}
+  \item Example:
+  \begin{equation}
+    \det
+    \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} =
+    (1)(4) - (2)(3) = -2. \label{eq:det2x2_example}
+  \end{equation}
+\end{itemize}
 \end{frame}
+
+\begin{frame}{Exercise: \(2 \times 2\) Determinant}
+\begin{example}[Exercise]
+Compute the determinant of the matrix:
+\begin{equation}
+  A =
+  \begin{pmatrix} 5 & 7 \\ 2 & 6 \end{pmatrix}.
+\end{equation}
+\end{example}
+\end{frame}
+
+\begin{frame}{Solution: \(2 \times 2\) Determinant}
+\begin{example}[Solution]
+Using Equation~\eqref{eq:det2x2}:
+\begin{equation}
+  \det(A) =
+  (5)(6) - (7)(2) =
+  30 - 14 =
+  16.
+\end{equation}
+\end{example}
+\end{frame}
+
+\begin{frame}{Determinant of a \(3 \times 3\) Matrix}
+We compute the determinant of a \(3 \times 3\) matrix by expanding along the first row:
+\begin{equation}
+A =
+\begin{pmatrix} 
+a & b & c \\ 
+d & e & f \\ 
+g & h & i 
+\end{pmatrix}.
+\end{equation}
+
+The formula is:
+\begin{equation}
+\det(A) =
+a 
+\begin{vmatrix} 
+e & f \\ h & i 
+\end{vmatrix}
+- b 
+\begin{vmatrix} 
+d & f \\ g & i 
+\end{vmatrix}
++ c 
+\begin{vmatrix} 
+d & e \\ g & h 
+\end{vmatrix}. \label{eq:det3x3_expansion}
+\end{equation}
+
+Each \(2 \times 2\) minor is the determinant of the smaller matrix obtained by deleting the corresponding row and column.
+\end{frame}
+
+\begin{frame}{Why does this work?}
+The determinant of \(A\) is defined recursively by expanding into \(2 \times 2\) minors:
+\begin{equation}
+\begin{vmatrix} 
+m_{11} & m_{12} \\ m_{21} & m_{22} 
+\end{vmatrix} =
+m_{11}m_{22} - m_{12}m_{21}.
+\end{equation}
+
+So:
+\begin{align}
+\det(A) =
+a 
+\begin{vmatrix} 
+e & f \\ h & i 
+\end{vmatrix}
+&- b 
+\begin{vmatrix} 
+d & f \\ g & i 
+\end{vmatrix}
++ c 
+\begin{vmatrix} 
+d & e \\ g & h 
+\end{vmatrix}. 
+\end{align}
+
+\vspace{0.2cm}
+This is called the \emph{Laplace expansion}.
+
+Signs come from the cofactor sign pattern:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\cellcolor{blue!20} \(+\) & \cellcolor{red!20} \(-\) & \cellcolor{blue!20} \(+\) \\ \hline
+\cellcolor{red!20} \(-\) & \cellcolor{blue!20} \(+\) & \cellcolor{red!20} \(-\) \\ \hline
+\cellcolor{blue!20} \(+\) & \cellcolor{red!20} \(-\) & \cellcolor{blue!20} \(+\) \\ \hline
+\end{tabular}
+\end{center}
+The determinant of an \(n \times n\) matrix is computed similarly: expanding along any row or column into \((n-1) \times (n-1)\) minors.
+\end{frame}
+
+\begin{frame}{Numerical Example}
+Compute:
+\begin{equation}
+A =
+\begin{pmatrix} 
+1 & 2 & 3 \\ 
+4 & 5 & 6 \\ 
+7 & 8 & 9 
+\end{pmatrix}.
+\end{equation}
+
+Expanding along the first row:
+\begin{align}
+\det(A) &=
+1 
+\begin{vmatrix} 
+5 & 6 \\ 8 & 9 
+\end{vmatrix}
+- 2 
+\begin{vmatrix} 
+4 & 6 \\ 7 & 9 
+\end{vmatrix}
++ 3 
+\begin{vmatrix} 
+4 & 5 \\ 7 & 8 
+\end{vmatrix} \\
+&= 1(5\cdot9 -6\cdot8) -2(4\cdot9 -6\cdot7) +3(4\cdot8 -5\cdot7) \\
+&= 1(-3) -2(-6) +3(-3) \\
+&= -3 +12 -9 = 0.
+\end{align}
+
+The determinant of this matrix is \(0\), so it is singular (non-invertible).
+\end{frame}
+
+\begin{frame}{Exercise: Compute a \(3 \times 3\) Determinant}
+\begin{block}{Exercise}
+Compute the determinant of:
+\begin{equation}
+A =
+\begin{pmatrix} 
+2 & 1 & 3 \\ 
+0 & -1 & 4 \\ 
+5 & 2 & 0 
+\end{pmatrix}.
+\end{equation}
+Use expansion along the first row.
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Solution: Exercise}
+\begin{block}{Solution}
+\begin{align}
+\det(A) &=
+2 
+\begin{vmatrix} 
+-1 & 4 \\ 2 & 0 
+\end{vmatrix}
+- 1 
+\begin{vmatrix} 
+0 & 4 \\ 5 & 0 
+\end{vmatrix}
++ 3 
+\begin{vmatrix} 
+0 & -1 \\ 5 & 2 
+\end{vmatrix} \\
+&= 2((-1)(0) -4(2)) -1(0 -4(5)) +3((0)(2) -(-1)(5)) \\
+&= 2(0-8) -1(0-20) +3(0+5) \\
+&= -16 +20 +15 = 19.
+\end{align}
+Therefore, \(\det(A) = 19.\)
+\end{block}
+\end{frame}
+
+\begin{frame}{The Eigenvalue Problem — Step by Step}
+We want to find scalars \(\lambda\) and nonzero vectors \(\vec{v}\) such that:
+\begin{equation}
+A \vec{v} = \lambda \vec{v}.
+\end{equation}
+
+\textbf{Step 1:} Rewrite as
+\begin{equation}
+(A - \lambda I)\vec{v} = 0.
+\end{equation}
+
+\textbf{Step 2:} For a nontrivial solution (\(\vec{v} \neq 0\)), the matrix \(A - \lambda I\) must be singular:
+\begin{equation}
+\det(A - \lambda I) = 0.
+\end{equation}
+
+This is called the \emph{characteristic equation}.
+\end{frame}
+
+\begin{frame}{Solving the Eigenvalue Problem}
+\textbf{Step 3:} Expand \(\det(A - \lambda I) = 0\) to get a polynomial in \(\lambda\).
+
+\textbf{Step 4:} The roots of this polynomial are the eigenvalues.
+
+\textbf{Step 5:} For each eigenvalue \(\lambda\), solve:
+\begin{equation}
+(A - \lambda I)\vec{v} = 0
+\end{equation}
+to find the corresponding eigenvector(s) by computing the nullspace.
+\end{frame}
+
+\begin{frame}{Example: Eigenvalues and Eigenvectors}
+Given:
+\begin{equation}
+A =
+\begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}.
+\end{equation}
+
+\textbf{Step 1:} Compute \(A - \lambda I\):
+\begin{equation}
+A - \lambda I =
+\begin{pmatrix} 2-\lambda & 1 \\ 1 & 2-\lambda \end{pmatrix}.
+\end{equation}
+
+\textbf{Step 2:} Characteristic equation:
+\begin{align}
+\det(A-\lambda I) &= (2-\lambda)(2-\lambda) -1 \\
+&= \lambda^2 -4\lambda+3 =0.
+\end{align}
+
+\textbf{Step 3:} Roots:
+\begin{equation}
+\lambda_1 = 1, \quad \lambda_2 = 3.
+\end{equation}
+\end{frame}
+
+\begin{frame}{Example: Eigenvectors}
+For \(\lambda_2=3\):
+\begin{equation}
+A-3I =
+\begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix}.
+\end{equation}
+We solve:
+\begin{equation}
+(A-3I)\vec{v} =
+\begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix}
+\vec{v} =
+0.
+\end{equation}
+
+This gives \(v_1=v_2\), so an eigenvector is:
+\begin{equation}
+\vec{v}_1 =
+\begin{pmatrix}1\\1\end{pmatrix}.
+\end{equation}
+
+For \(\lambda_1=1\):
+\begin{equation}
+A-I =
+\begin{pmatrix}1 &1 \\1 &1\end{pmatrix}.
+\end{equation}
+
+This gives \(v_1=-v_2\), so an eigenvector is:
+\begin{equation}
+\vec{v}_2 =
+\begin{pmatrix}1\\-1\end{pmatrix}.
+\end{equation}
+\end{frame}
+
+\begin{frame}{Exercise: Find Eigenvalues and Eigenvectors}
+\begin{block}{Exercise}
+Find the eigenvalues and one eigenvector for each eigenvalue of the matrix:
+\begin{equation}
+A =
+\begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix}.
+\end{equation}
+\end{block}
+\end{frame}
+
+\begin{frame}{Solution: Exercise}
+\textbf{Step 1:} Compute characteristic polynomial:
+\begin{align}
+\det(A-\lambda I) &=
+\begin{vmatrix}4-\lambda &2 \\1 &3-\lambda\end{vmatrix} =
+(4-\lambda)(3-\lambda)-2 \\
+&= \lambda^2 -7\lambda+10=0.
+\end{align}
+
+\textbf{Step 2:} Roots:
+\begin{equation}
+\lambda_1=5, \quad \lambda_2=2.
+\end{equation}
+
+\textbf{Step 3:} For \(\lambda_1=5\):
+\begin{equation}
+A-5I =
+\begin{pmatrix}-1&2\\1&-2\end{pmatrix}.
+\end{equation}
+Nullspace: \(v_1=2v_2\), so:
+\begin{equation}
+\vec{v}_1 =
+\begin{pmatrix}2\\1\end{pmatrix}.
+\end{equation}
+
+\end{frame}
+\begin{frame}{Solution 2}
+For \(\lambda_2=2\):
+\begin{equation}
+A-2I =
+\begin{pmatrix}2&2\\1&1\end{pmatrix}.
+\end{equation}
+Nullspace: \(v_1=-v_2\), so:
+\begin{equation}
+\vec{v}_2 =
+\begin{pmatrix}1\\-1\end{pmatrix}.
+\end{equation}
+\end{frame}
+
+
 
 \end{document}
