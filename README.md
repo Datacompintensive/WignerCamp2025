@@ -125,9 +125,9 @@ You should get familiar with the folders in this repository in the following ord
 
 | Folder | Description |
 |--------|-------------|
+| [Terminal](./Terminal) | Gives information on the most important `linux` terminal and `vim` commands. |
 | [BasicProgramming](./BasicProgramming) | Contains materials and exercises on the basics of Python programming and data processing. |
 | [Mathematics](./Mathematics) | Introduces key mathematical concepts for the **ALT method**, focusing on linear algebra and the **time series classification (TSC)** problem. |
-| [Terminal](./Terminal) | Gives information on the most important `linux` terminal and `vim` commands. |
 | [TestsAndDocumentation](./TestsAndDocumentation) | Describes the basic usage of `pytest` and introduces the **NumPy-style docstrings** for python functions. |
 | [ALT_intro](./ALT_intro) | Contains introductary exercises which prepares for intorducuction of the ALT method. |
 | [ALT](./ALT) | Describes the **ALT method** in detail. |
@@ -161,7 +161,8 @@ To build the LaTeX documents with `CMake`, you need to have `cmake`, `pdflatex`,
 For example, on Ubuntu/Debian:
 ```bash
 sudo apt update
-sudo apt install cmake texlive-latex-base texlive-latex-recommended texlive-bibtex-extra texlive-fonts-recommended
+sudo apt install cmake texlive-latex-base texlive-latex-recommended
+sudo apt install texlive-bibtex-extra texlive-fonts-recommended
 ```
 
 - `cmake` — the build system.
