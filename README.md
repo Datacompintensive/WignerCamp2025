@@ -34,7 +34,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">10:00-10:30</td>
-            <td rowspan="5"><a href="./BasicProgramming/">Basic Programming</a> + <a href="./Terminal/Git.md">Short introduction to Git & GitHub</a></td>
+            <td rowspan="2"><a href="./Mathematics/linear_algebra.pdf">Introduction to Linear Algebra</a></td>
             <td rowspan="2"><a href="./ALT_intro/Eigenvector/">ALT introduction - Find the smallest eigenvector</a></td>
         </tr>
         <tr>
@@ -42,6 +42,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">11:00-11:30</td>
+            <td rowspan="5"><a href="./BasicProgramming/">Basic Programming</a> + <a href="./Terminal/Git.md">Short introduction to Git & GitHub</a></td>
             <td><a href="./ALT_intro/FeatureExtraction/">ALT introduction - Feature Extraction</a></td>
             <td rowspan="2">Finalizing Presentation</td>
         </tr>
@@ -66,9 +67,9 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">13:30-14:00</td>
-            <td rowspan="3"><a href="./Mathematics/linear_algebra.pdf">Introduction to Linear Algebra</a></td>
+            <td rowspan="3">Mathematics II</td>
             <td rowspan="3">Running ALT on TSC <i>(& choosing r, l, k values)</i></td>
-            <td rowspan="3">Non project related activity (visiting nuclear reactor)</td>
+            <td rowspan="3">Non project related activity <i>(visiting nuclear reactor)</i></td>
             <td rowspan="6">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>

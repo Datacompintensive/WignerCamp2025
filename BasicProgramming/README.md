@@ -4,6 +4,8 @@ This folder provides a self-contained, beginner-friendly introduction to the ess
 
 ## 📚 Contents
 
+During the processing ot these documents, we are suggesting the use of our [basic-programming.pdf](**Basic Programming for AI**) presentation which covers the mentioned topics and provides a foundation for working with these notebooks listed below. For reaching the source file of the presentation, [basic-programming.tex](click here).
+
 | Notebook                                | Description                                           | Solution File                                      |
 |----------------------------------------|-------------------------------------------------------|----------------------------------------------------|
 | [python_basics.ipynb](python_basics.ipynb)             | Core Python syntax and programming concepts           | [python_basics_solutions.ipynb](python_basics_solutions.ipynb)             |
