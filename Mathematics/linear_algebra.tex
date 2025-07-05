@@ -94,7 +94,7 @@
 % Define affiliations
 \newcommand{\affiliation}[2]{#1\textsuperscript{\textcolor{blue}{#2}}}
 
-\title{\textcolor{blue}{Introduction to Linear Algebra}}
+\title{\textcolor{blue}{Linear Algebra I: Basics}}
 \subtitle{\textcolor{blue}{Wigner Summer Camp \\ Data and Compute Intensive Sciences Research Group}}
 \author{\textcolor{blue}{Balázs, Paszkál, Vince, Levente, Antal \\ Éva, Hajni}}
 
@@ -142,7 +142,7 @@
     \begin{itemize}
         \item Physics (velocity, force, ...).
         \item Artificial intelligence - neural networks.
-        \item \textbf{Adaptive Law-Based Transformation (ALT).} 
+        \item \textbf{Adaptive Law-Based Transformation (ALT).}
         \item ...
     \end{itemize}
 \end{frame}
@@ -193,7 +193,7 @@
     \begin{equation}
         \vec{a} \cdot \vec{b} = ||\vec{a}||\cdot||\vec{b}||\cos(\angle\left(\vec{a},\vec{b}\right)).
     \end{equation}
-    \begin{example}[Dot product]    
+    \begin{example}[Dot product]
         \begin{equation}
         \begin{bmatrix} 2 \\ 3 \end{bmatrix} \cdot \begin{bmatrix} 4 \\ -1 \end{bmatrix} = 2\cdot4 + 3\cdot(-1) = 8 - 3 = 5.
         \end{equation}
@@ -313,20 +313,20 @@
 \begin{itemize}
     \item Each matrix denotes a transformation $\vec{v} \mapsto M\vec{v}$. It's always linear.
     \item It can be proven that all linear transformations can be described with a matrix.
-    
+
 \end{itemize}
-    
+
 \end{frame}
 
 \begin{frame}{Transformation examples}
   \begin{itemize}
-    \item Stretching: 
+    \item Stretching:
     %\begin{equation}
     $\begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}.$ %\vec{v} = %\text{doubles length}
     %\end{equation}
     \item Rotation:
     %\begin{equation}
-    %\text{Rotation by } 90^\circ: 
+    %\text{Rotation by } 90^\circ:
     $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}.$
     %\end{equation}
     \item Reflection:
@@ -372,9 +372,9 @@
 
 \begin{frame}{Eigenvalues and Eigenvectors}
   \begin{itemize}
-    \item Notice that 
+    \item Notice that
     \begin{equation}
-        \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = 2\begin{bmatrix} 1 \\ 1 \end{bmatrix}. 
+        \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = 2\begin{bmatrix} 1 \\ 1 \end{bmatrix}.
     \end{equation}
     \item Generally for a square matrix \(A\) if
     \begin{equation}
@@ -421,6 +421,6 @@ In this presentation you learned about:
         \item Vector-Matrix and Matrix-Matrix multiplication.
         \item Eigendecomposition.
     \end{itemize}
-    
+
 \end{frame}
 \end{document}
