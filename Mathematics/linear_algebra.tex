@@ -151,7 +151,7 @@
   \begin{itemize}
     \item \textbf{Mathematician's view:} A set that satisfies the 8 axioms.
     \item \textbf{Physicist's view:} An arrow in space with direction and magnitude.
-    \item \textbf{Computer Scientist's view:} A 1D array or list of numbers.
+    \item \textbf{Computer Scientist's view:} A 1D array or list of numbers, for example
     \begin{equation}
     \vec{v} = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}, \quad
     \mathbf{w} = \langle 4, 0, -5 \rangle, \quad
@@ -159,9 +159,9 @@
     \end{equation}
     \item \textbf{Notation:}
     \begin{itemize}
-      \item Boldface: $\mathbf{v}$ (common in CS and mathematical books)
-      \item Arrow: $\vec{v}$ (common in physics)
-      \item Angled brackets or parentheses
+      \item Boldface: $\mathbf{v}$ (common in CS and mathematical books).
+      \item Arrow: $\vec{v}$ (common in physics).
+      \item Angled brackets or parentheses.
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -185,7 +185,7 @@
 
 \begin{frame}{What is the Dot Product?}
   \begin{itemize}
-    \item The dot product of two vectors $\vec{a}$ and $\vec{b}$ is:
+    \item The dot product of two \(n\) dimenaional vectors $\vec{a}$ and $\vec{b}$ is:
     \begin{equation}
     \vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + \dots + a_n b_n.
     \end{equation}
@@ -205,7 +205,7 @@
   \begin{itemize}
     \item Calculate the dot product of the following vector pairs:
     \begin{enumerate}
-      \item $\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix} \cdot \begin{bmatrix} 4 \\ 0 \\ -1 \end{bmatrix}.$
+      \item $\begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix} \cdot \begin{bmatrix} 4 \\ 0 \\ -1 \end{bmatrix}.$
       \item $\begin{bmatrix} 2 \\ 5 \end{bmatrix} \cdot \begin{bmatrix} -1 \\ 1 \end{bmatrix}.$
     \end{enumerate}
   \end{itemize}
@@ -215,7 +215,7 @@
   \begin{itemize}
     \item \textbf{Solution to (a):}
     \[
-    1 \cdot 4 + (-2) \cdot 0 + 3 \cdot (-1) = 4 + 0 - 3 = \boxed{1}.
+    1 \cdot 4 + (-2) \cdot 0 + 4 \cdot (-1) = 4 + 0 - 4 = \boxed{0}.
     \]
     \item \textbf{Solution to (b):}
     \[
@@ -263,7 +263,7 @@
 
 \begin{frame}{Vector-Matrix Multiplication – Exercises}
   \begin{itemize}
-    \item Multiply the vector $\vec{v}$ with matrix $M$ in the following examples:
+    \item Multiply the vector $\vec{v}$ with matrix $M$ in the following examples (calculate \(\vec{v}M\)):
     \begin{enumerate}
       \item General case:
       \begin{equation}
@@ -343,14 +343,14 @@
   \begin{itemize}
   	\item The number of columns in the first matrix must be equal to the number of rows in the second matrix.
   \end{itemize}
-  \begin{equation} A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}, \quad B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} \end{equation}
+  \begin{equation} A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}, \quad B = \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{bmatrix} \end{equation}.
 
-  \begin{equation} A\cdot B =  \begin{bmatrix} {a_{11} \cdot b_{11} + a_{12} \cdot b_{21}} & {a_{11} \cdot b_{12} + a_{12} \cdot b_{22}} \\ {a_{21} \cdot b_{11} + a_{22} \cdot b_{21}} & {a_{21} \cdot b_{12} + a_{22} \cdot b_{22}} \end{bmatrix} \end{equation}
+  \begin{equation} A\cdot B =  \begin{bmatrix} {a_{11} \cdot b_{11} + a_{12} \cdot b_{21}} & {a_{11} \cdot b_{12} + a_{12} \cdot b_{22}} \\ {a_{21} \cdot b_{11} + a_{22} \cdot b_{21}} & {a_{21} \cdot b_{12} + a_{22} \cdot b_{22}} \end{bmatrix} \end{equation}.
 
   \begin{example}
 	\begin{equation}
 		A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}
-		\Rightarrow A\cdot B = \begin{bmatrix} 4 & 4 \\ 10 & 8 \end{bmatrix}
+		\Rightarrow A\cdot B = \begin{bmatrix} 4 & 4 \\ 10 & 8 \end{bmatrix}.
 	\end{equation}
 \end{example}
 \end{frame}
@@ -359,13 +359,13 @@
   \begin{example}
     \begin{equation}
       A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}, B = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{bmatrix}
-      \Rightarrow A\cdot B = \begin{bmatrix} 4 & 5 \\ 10 & 11 \end{bmatrix}
+      \Rightarrow A\cdot B = \begin{bmatrix} 4 & 5 \\ 10 & 11 \end{bmatrix}.
     \end{equation}
   \end{example}
   \begin{example}
     \begin{equation}
       A = \begin{bmatrix} 8 & 4 & 11 & 5 \\ 4 & 4 & 21 & 6 \\ 6 & 9 & 11 & 8 \end{bmatrix}, B = \begin{bmatrix} 3 & 2 \\ 4 & 6 \\ 1 & 4 \\ 7 & 2 \end{bmatrix}
-      \Rightarrow A\cdot B = \begin{bmatrix} 86 & 94 \\ 91 & 128 \\ 121 & 126\end{bmatrix}
+      \Rightarrow A\cdot B = \begin{bmatrix} 86 & 94 \\ 91 & 128 \\ 121 & 126\end{bmatrix}.
     \end{equation}
   \end{example}
 \end{frame}

@@ -22,19 +22,19 @@ The camp is designed for high school students and introduces the mathematical an
             <td class="time-column">9:00-9:30</td>
             <td>Opening Ceremony</td>
             <td>Revision Exercises</td>
-            <td>Introduction to the choosen topic</td>
-            <td rowspan="7">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
+            <td>Introduction to the chosen topic</td>
+            <td rowspan="7">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
             <td rowspan="4">Creating Presentation</td>
         </tr>
         <tr>
             <td class="time-column">9:30-10:00</td>
             <td>Introduction</td>
             <td><a href="./Terminal/Vim.md">Introduction to VIM</a></td>
-            <td rowspan="6">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
+            <td rowspan="6">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
             <td class="time-column">10:00-10:30</td>
-            <td rowspan="2"><a href="./Mathematics/linear_algebra.pdf">Introduction to Linear Algebra</a></td>
+            <td rowspan="2"><a href="./Mathematics/linear_algebra.pdf">Linear Algebra I: Basics</a></td>
             <td rowspan="2"><a href="./ALT_intro/Eigenvector/">ALT introduction - Find the smallest eigenvector</a></td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">11:00-11:30</td>
-            <td rowspan="3"><a href="./BasicProgramming/">Basic Programming</a> + <a href="./Terminal/Git.md">Short introduction to Git & GitHub</a></td>
+            <td rowspan="3"><a href="./Terminal/Git.md">Short introduction to Git & GitHub</a> + <a href="./BasicProgramming/">Basic Programming</a></td>
             <td><a href="./ALT_intro/FeatureExtraction/">ALT introduction - Feature Extraction</a></td>
             <td rowspan="2">Finalizing Presentation</td>
         </tr>
@@ -67,10 +67,10 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">13:30-14:00</td>
-            <td rowspan="3">Mathematics II</td>
+            <td rowspan="3"><a href="./Mathematics/linear_algebra_eigenvalues.pdf">Linear Algebra II: Determinants and Eigenvalues</a></td>
             <td rowspan="3">Running ALT on TSC <i>(& choosing r, l, k values)</i></td>
             <td rowspan="3">Non project related activity <i>(visiting nuclear reactor)</i></td>
-            <td rowspan="6">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
+            <td rowspan="8">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>
         <tr>
@@ -81,12 +81,18 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">15:00-15:30</td>
-            <td rowspan="2"><a href="./Mathematics/miscellaneous_topics.pdf">Introduction to Percentiles and Linear Recursion</a> <br><a href="./Mathematics/TSC.pdf">Introduction to TSC</a></td>
-            <td rowspan="3"><a href="./TestsAndDocumentation/">Writing tests for ALT<a></td>
-            <td rowspan="2">Working on the choosen topic <i>(anomaly detection or fewer laws)</i></td>
+            <td rowspan="4"><a href="./Mathematics/miscellaneous_topics.pdf">Introduction to Percentiles and Linear Recursions</a> + <br><a href="./Mathematics/TSC.pdf">Introduction to TSC</a></td>
+            <td rowspan="5"><a href="./TestsAndDocumentation/">Writing tests for ALT<a></td>
+            <td rowspan="4">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
             <td class="time-column">15:30-16:00</td>
+        </tr>
+        <tr>
+            <td class="time-column">16:00-16:30</td>
+        </tr>
+        <tr>
+            <td class="time-column">16:30-17:00</td>
         </tr>
     </table>
 </body>
@@ -96,17 +102,17 @@ The camp is designed for high school students and introduces the mathematical an
 
 The core method of the camp is the **Adaptive Law-based Transformation (ALT)** — a lightweight, interpretable, and efficient feature representation technique for time series classification. ALT builds on the earlier LLT method and provides state-of-the-art performance with minimal tuning.
 
-- **ALT Preprint**  
-  *Marcell T. Kurbucz, Balázs Hajós, Balázs P. Halmos, Vince Á. Molnár, Antal Jakovác*.  
-  *Adaptive Law-Based Transformation (ALT): A Lightweight Feature Representation for Time Series Classification.*  
+- **ALT Preprint:**
+  *Marcell T. Kurbucz, Balázs Hajós, Balázs P. Halmos, Vince Á. Molnár, Antal Jakovác*.
+  *Adaptive Law-Based Transformation (ALT): A Lightweight Feature Representation for Time Series Classification.*
   arXiv preprint: [arXiv:2501.09217](https://arxiv.org/abs/2501.09217) (2025).
 
-- **ALT Software Package**  
-  *Balázs P. Halmos, Balázs Hajós, Vince Á. Molnár, Marcell T. Kurbucz, Antal Jakovác*.  
-  *ALT: A Python Package for Lightweight Feature Representation in Time Series Classification.*  
+- **ALT Software Package:**
+  *Balázs P. Halmos, Balázs Hajós, Vince Á. Molnár, Marcell T. Kurbucz, Antal Jakovác*.
+  *ALT: A Python Package for Lightweight Feature Representation in Time Series Classification.*
   arXiv preprint: [arXiv:2504.12841](https://arxiv.org/abs/2504.12841) (2025).
 
-- **ALT Source Code**  
+- **ALT Source Code:**
   GitHub repository: [github.com/Datacompintensive/ALT](https://github.com/Datacompintensive/ALT)
 
 ---
@@ -173,7 +179,7 @@ sudo apt install texlive-bibtex-extra texlive-fonts-recommended
 
 ### 🔧 Compiling LaTeX Documents
 
-Some folders contain `.tex` slides or documents. To compile all LaTeX files using `CMake`:
+Some folders contain `.tex` slides or documents. To compile all LaTeX files using `CMake` follow the next example:
 
 ```bash
 mkdir build
