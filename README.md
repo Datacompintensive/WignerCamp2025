@@ -136,7 +136,7 @@ You should get familiar with the folders in this repository in the following ord
 | [BasicProgramming](./BasicProgramming) | Contains materials and exercises on the basics of Python programming and data processing. |
 | [Mathematics](./Mathematics) | Introduces key mathematical concepts for the **ALT method**, focusing on linear algebra and the **time series classification (TSC)** problem. |
 | [TestsAndDocumentation](./TestsAndDocumentation) | Describes the basic usage of `pytest` and introduces the **NumPy-style docstrings** for python functions. |
-| [ALT_intro](./ALT_intro) | Contains introductary exercises which prepares for intorducuction of the ALT method. |
+| [ALT_intro](./ALT_intro) | Contains introductary exercises which prepare for introduction of the ALT method. |
 | [ALT](./ALT) | Describes the **ALT method** in detail. |
 
 ---
