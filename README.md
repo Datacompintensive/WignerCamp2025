@@ -30,7 +30,7 @@ The camp is designed for high school students and introduces the mathematical an
             <td class="time-column">9:30-10:00</td>
             <td>Introduction</td>
             <td><a href="./Terminal/Vim.md">Introduction to VIM</a></td>
-            <td rowspan="6">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
+            <td rowspan="5">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
             <td class="time-column">10:00-10:30</td>
@@ -52,6 +52,7 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">12:00-12:30</td>
+            <td rowspan="2">Lunch</td>
             <td>Practice Presentation</td>
         </tr>
         <tr>
@@ -60,16 +61,15 @@ The camp is designed for high school students and introduces the mathematical an
             <td rowspan="2">Lunch</td>
             <td rowspan="2">Lunch</td>
             <td rowspan="2">Lunch</td>
-            <td rowspan="2">Lunch</td>
         </tr>
         <tr>
             <td class="time-column">13:00-13:30</td>
+            <td rowspan="3">Non project related activity <i>(visiting nuclear reactor)</i></td>
         </tr>
         <tr>
             <td class="time-column">13:30-14:00</td>
             <td rowspan="3"><a href="./Mathematics/linear_algebra_eigenvalues.pdf">Linear Algebra II: Determinants and Eigenvalues</a></td>
             <td rowspan="3">Running ALT on TSC <i>(& choosing r, l, k values)</i></td>
-            <td rowspan="3">Non project related activity <i>(visiting nuclear reactor)</i></td>
             <td rowspan="8">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
             <td  rowspan="10">Closing & presentation</td>
         </tr>
@@ -78,12 +78,12 @@ The camp is designed for high school students and introduces the mathematical an
         </tr>
         <tr>
             <td class="time-column">14:30-15:00</td>
+            <td rowspan="5">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
             <td class="time-column">15:00-15:30</td>
             <td rowspan="4"><a href="./Mathematics/miscellaneous_topics.pdf">Introduction to Percentiles and Linear Recursions</a> + <br><a href="./Mathematics/TSC.pdf">Introduction to TSC</a></td>
             <td rowspan="5"><a href="./TestsAndDocumentation/">Writing tests for ALT<a></td>
-            <td rowspan="4">Working on the chosen topic <i>(anomaly detection or fewer laws)</i></td>
         </tr>
         <tr>
             <td class="time-column">15:30-16:00</td>
